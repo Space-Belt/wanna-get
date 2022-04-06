@@ -1,10 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Logo } from '../../images';
 
 function Header() {
   return (
     <Container>
-      <PageName>엄빠사주세요!</PageName>
+      <PageName>
+        <img src={Logo} alt="" />
+      </PageName>
       <NavBar></NavBar>
     </Container>
   );
@@ -15,17 +18,22 @@ const Container = styled.div`
   height: 10vh;
   display: flex;
   justify-content: center;
-
-  border: 1px solid red;
+  min-width: 673px;
+  background-color: aquamarine;
 `;
 
-const PageName = styled.h1`
-  width: 13vw;
+const PageName = styled.div`
+  width: 300px;
   height: 10vh;
-  line-height: 10vh;
+  display: flex;
+  justify-content: center;
   text-align: center;
   font-size: 1.5rem;
-  @media screen and (max-width: 1308px) {
+  & img {
+    width: 150px;
+    object-fit: contain;
+  }
+  /* @media screen and (max-width: 1308px) {
     font-size: 1.25rem;
   }
   @media screen and (max-width: 839px) {
@@ -42,11 +50,11 @@ const PageName = styled.h1`
   }
   @media screen and (max-width: 685px) {
     font-size: 1rem;
-  }
+  } */
 `;
 
 const NavBar = styled.div`
-  width: 87vw;
+  width: 100%;
   height: 10vh;
 `;
 
