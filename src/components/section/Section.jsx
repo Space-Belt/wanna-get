@@ -1,10 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import RegistForm from './RegistForm';
 
 function Section() {
   return (
     <SectionContainer>
-      <Regist></Regist>
+      <Regist>
+        <RegistForm />
+      </Regist>
     </SectionContainer>
   );
 }
